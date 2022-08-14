@@ -160,8 +160,10 @@ function agregarItemsAlCarrito(productoTitulo, productoPrecio, productoImg) {
     Toastify({
         text: "Producto añadido al carrito",
         gravity: "bottom",
+        stopOnFocus: false,
+        duration: 1200,
         style: {
-            background: "radial-gradient( circle farthest-corner at 11.9% 17%,  rgba(73,96,108,1) 0%, rgba(62,80,89,1) 90% ))",
+            background: "var(--NaranjaRGBA)",
 
         }
     })

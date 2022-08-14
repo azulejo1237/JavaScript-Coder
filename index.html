@@ -19,7 +19,7 @@
 
 <body class="color-body">
     <!-- Barra de navegacion -->
-    <nav class="navbar navbar-expand-sm bg-dark">
+    <nav class="navbar navbar-expand-sm">
         <div class="container-fluid">
             <a class="navbar-brand text-light">Tienda de componentes</a>
             <form class="d-flex">
@@ -32,7 +32,10 @@
         </div></a>
 
     </nav>
+    
+            <!-- Aside de categorias -->
     <aside class="productos_contenidos">
+        <div class="contenedor_categoria_filtos">
         <section class="aside_categoria">
             <div class="borde-categoria">
                 <a class="collapse_categorias" data-bs-toggle="collapse" href="#collapseExample" role="button"
@@ -69,14 +72,35 @@
                     </div>
                 </div>
             </div>
-
         </section>
+
+        <!-- aside filtros -->
+        <section class="aside_categoria">
+            <div class="borde-categoria">
+                <a class="collapse_categorias" data-bs-toggle="collapse" href="#collapseFiltro" role="button"
+                    aria-expanded="false" aria-controls="collapseFiltro">
+                    <h3 class="categoria_texto">Ordenar por</h3><img class="categoria__imagen--flecha-abajo"
+                        src="img/icono-flecha-abajo.png" alt="">
+                </a>
+                <div class="contenedorCategorias">
+                    <div class="collapse collapse-borde" id="collapseFiltro">
+                        <div class="card card-body quitar__borde">
+                            <span id="orden">Menor Precio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Aside Productos -->
         <section class="aside_Productos">
             <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 g-0" id="card-producto__contenido">
             </div>
             <div class="contenedorProducto"></div>
         </section>
     </aside>
+
     <!-- The Modal -->
     <div class="modal fade" id="myModal" tabindex="-1">
         <div class="modal-dialog modal-xl">
@@ -118,7 +142,7 @@
                                             <p class="mb-0">Total:</p>
                                             <p class="ml-4 mb-0 shoppingCartTotal">0$</p>
                                         </div>
-                                        <button class="btn btn-success ml-auto comprarButton" type="button"
+                                        <button class="btn boton__comprar ml-auto comprarButton" type="button"
                                             data-bs-dismiss="modal">Comprar</button>
                                     </div>
                                 </div>

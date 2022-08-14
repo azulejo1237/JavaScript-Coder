@@ -1,7 +1,16 @@
-.color-body {
-  background-color: #ebebeb;
+:root {
+  --NaranjaRGBA: rgba(253, 97, 26, 0.8);
+  --NaranjaFuerte: #fd611a;
+  --blancoSuave: #ebebeb;
+  --negro: rgb(0, 0, 0);
+  --Blanco: #fff;
 }
-
+.color-body {
+  background-color: var(--blancoSuave);
+}
+.navbar {
+  background-color: var(--NaranjaRGBA) !important;
+}
 .formulario {
   display: flex;
   justify-content: center;
@@ -14,7 +23,7 @@
   width: 20rem;
 }
 .item {
-  border: 0.1rem solid #000;
+  border: 0.1rem solid var(--negro);
   padding: 0.625rem;
   border-radius: 1.25rem;
 }
@@ -85,11 +94,15 @@
   object-fit: contain;
 }
 .agregarAlCarrito__boton {
-  background-color: orangered !important;
+  background-color: var(--NaranjaFuerte) !important;
+}
+.boton__comprar {
+  color: var(--Blanco) !important;
+  background-color: var(--NaranjaFuerte) !important;
 }
 
 .productoPrecio {
-  color: #4675b9;
+  color: var(--negro);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,65 +114,64 @@
 /* Aside Productos */
 .productos_contenidos {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
   margin-top: 3rem;
   margin-left: 1rem;
 }
 .aside_categoria {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 30%;
+  width: 15rem;
 }
 .collapse_categorias {
   display: flex;
   justify-content: center;
+  align-items: center;
   text-decoration: none;
   align-items: center;
-  color: black;
+  color: var(--negro);
 }
 .categoria_texto {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-right: 10%;
-
+  font-size: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom:  1rem;
 }
 .categoria__imagen--flecha-abajo {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 1rem;
+  margin-bottom:  1rem;
 }
 .collapse_categorias:hover {
-  color: black;
+  color: var(--negro);
 }
 .borde-categoria {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fff;
+flex-direction: column;
+align-items: center;
+  background-color: var(--Blanco);
   box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12);
-    width: 100% !important;
-
+  width: 100% !important;
 }
 .collapse-borde {
-  background-color: #fff;
-
+  background-color: var(--Blanco);
 }
-#categoriaRam, #categoriaProcesadores, #categoriaTodosLosProductos, #categoriaMothers {
+#categoriaRam,
+#categoriaProcesadores,
+#categoriaTodosLosProductos,
+#categoriaMothers {
   cursor: pointer;
 }
 .quitar__borde {
-  background-color: #fff !important;
+  background-color: var(--Blanco) !important;
   border-color: transparent !important;
   padding-bottom: 0.4rem !important;
   padding-top: 0.3rem !important;
 }
 .aside_Productos {
-  width: 100%;
+  width: 80%;
 }
 
 @media (max-width: 1000px) {
@@ -167,21 +179,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    margin: 0;
+    margin-top: 2rem;
   }
   .aside_categoria {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: column;
-    width: 50%;
-    border: solid black 1px;
-    margin: 2rem;
-  }
-  .aside_Producto {
-    display: flex;
+    border: solid var(--negro) 0px;
+    width: 100%;
+    margin-bottom: 1rem;
   }
   .aside_Productos {
     width: 100%;
   }
+
 }
