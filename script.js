@@ -27,34 +27,114 @@ botonIniciarSesion.addEventListener("click", (e) => {
     })
 })
 
-
 // Productos Card
 const cardProductoContenido = document.getElementById("card-producto__contenido")
 
-// Productos Fetch
-fetch("./json/productos.json")
-    .then(promesa => promesa.json())
-    .then(data => {
-        data.forEach((producto) => {
-            cardProductoContenido.innerHTML += `
+// Agregar al carrito boton
+function agregarAlCarritoBotones() {
+    const agregarAlCarrito__botones = document.querySelectorAll(".agregarAlCarrito__boton")
+    agregarAlCarrito__botones.forEach(agregarAlCarritoBoton => {
+        agregarAlCarritoBoton.addEventListener("click", agregarAlCarritoClick)
+    })
+}
+// Procesaores Fetch
+function procesadoresProductos() {
+    fetch("./json/procesadores.json")
+        .then(promesa => promesa.json())
+        .then(data => {
+            data.forEach((producto) => {
+                cardProductoContenido.innerHTML += `
         <div class="col d-flex justify-content-center mb-4">
-        <div class="card shadow mb-1 bg-dark rounded card-withd card-width contenedorProducto">
-            <h5 class="card-title pt-2 text-center text-primary productoTitulo">${producto.nombre}</h5><img 
+        <div class="card shadow mb-1 card-withd card-width contenedorProducto">
+            <h5 class="card-title pt-2 text-center productoTitulo">${producto.nombre}</h5><img 
                 src="${producto.img}" class="card-img-top productoImg" alt="...">
             <div class="card-body">
-                <h5 class="text-primary">Precio: <span class="precio productoPrecio">$${producto.precio}</span></h5>
-                <div class="d-grid gap-2"><button class="btn btn-primary button agregarAlCarrito__boton">Añadir a Carrito</button></div>
+                <h5 class="text-primary"><span class="precio productoPrecio">$${producto.precio}</span></h5>
+                <div class="d-grid gap-2"><button class="btn text-light button agregarAlCarrito__boton">Añadir a Carrito</button></div>
             </div>
         </div>
     </div>
     `
+            })
+            agregarAlCarritoBotones()
         })
-        // Agregar al carrito boton
-        const agregarAlCarrito__botones = document.querySelectorAll(".agregarAlCarrito__boton")
-        agregarAlCarrito__botones.forEach(agregarAlCarritoBoton => {
-            agregarAlCarritoBoton.addEventListener("click", agregarAlCarritoClick)
+}
+// Rams Fetch
+function ramsProducto() {
+    fetch("./json/rams.json")
+        .then(promesa => promesa.json())
+        .then(data => {
+            data.forEach((producto) => {
+                cardProductoContenido.innerHTML += `
+        <div class="col d-flex justify-content-center mb-4">
+        <div class="card shadow mb-1  rounded card-withd card-width contenedorProducto">
+            <h5 class="card-title pt-2 text-center text-dark productoTitulo">${producto.nombre}</h5><img 
+                src="${producto.img}" class="card-img-top productoImg" alt="...">
+            <div class="card-body">
+                <h5 class=""><span class="precio productoPrecio">$${producto.precio}</span></h5>
+                <div class="d-grid gap-2"><button class="btn text-light button agregarAlCarrito__boton">Añadir a Carrito</button></div>
+            </div>
+        </div>
+    </div>
+    `
+            })
+            agregarAlCarritoBotones()
         })
-    })
+}
+function mothersProducto() {
+    fetch("./json//mothers.json")
+        .then(promesa => promesa.json())
+        .then(data => {
+            data.forEach((producto) => {
+                cardProductoContenido.innerHTML += `
+        <div class="col d-flex justify-content-center mb-4">
+        <div class="card shadow mb-1  rounded card-withd card-width contenedorProducto">
+            <h5 class="card-title pt-2 text-center text-dark productoTitulo">${producto.nombre}</h5><img 
+                src="${producto.img}" class="card-img-top productoImg" alt="...">
+            <div class="card-body">
+                <h5 class=""><span class="precio productoPrecio">$${producto.precio}</span></h5>
+                <div class="d-grid gap-2"><button class="btn text-light button agregarAlCarrito__boton">Añadir a Carrito</button></div>
+            </div>
+        </div>
+    </div>
+    `
+            })
+            agregarAlCarritoBotones()
+        })
+}
+function todosLosProductos() {
+    procesadoresProductos()
+    mothersProducto()
+    ramsProducto()
+}
+// categoria todos los productos 
+const categoriaTodosLosProductos = document.getElementById("categoriaTodosLosProductos")
+categoriaTodosLosProductos.addEventListener("click", () => {
+    cardProductoContenido.innerHTML = ``
+    todosLosProductos()
+})
+// categoria procesadores
+procesadoresProductos()
+const categoriaProcesador = document.getElementById("categoriaProcesadores")
+categoriaProcesadores.addEventListener("click", () => {
+    cardProductoContenido.innerHTML = ``
+    procesadoresProductos()
+})
+// categoria mothers
+mothersProducto()
+const categoriaMothers = document.getElementById("categoriaMothers")
+categoriaMothers.addEventListener("click", () => {
+    cardProductoContenido.innerHTML = ``
+    mothersProducto()
+})
+// categoria Ram
+ramsProducto()
+const categoriaRam = document.getElementById("categoriaRam")
+categoriaRam.addEventListener("click", () => {
+    cardProductoContenido.innerHTML = ``
+    ramsProducto()
+})
+
 
 // Boton comprar
 const comprarButton = document.querySelector('.comprarButton')
@@ -84,7 +164,8 @@ function agregarItemsAlCarrito(productoTitulo, productoPrecio, productoImg) {
             background: "radial-gradient( circle farthest-corner at 11.9% 17%,  rgba(73,96,108,1) 0%, rgba(62,80,89,1) 90% ))",
 
         }
-    }).showToast();
+    })
+        .showToast();
     for (let i = 0; i < elementsTitle.length; i++) {
         if (elementsTitle[i].innerText === productoTitulo) {
             let elementQuantity = elementsTitle[
@@ -105,7 +186,7 @@ function agregarItemsAlCarrito(productoTitulo, productoPrecio, productoImg) {
         <div class="col-6">
             <div class="shopping-cart-item d-flex align-items-center h-100 pb-2 pt-3">
                 <img src=${productoImg} class="shopping-cart-image">
-                <h6 class="shopping-cart-item-title shoppingCartItemTitle text-truncate ml-3 mb-0">${productoTitulo}</h6>
+                <h6 class="shopping-cart-item-title shoppingCartItemTitle ml-3 mb-0">${productoTitulo}</h6>
             </div>
         </div>
         <div class="col-2">
@@ -125,6 +206,7 @@ function agregarItemsAlCarrito(productoTitulo, productoPrecio, productoImg) {
         </div>
     </div>
         `
+
     carritoDeCompraFila.innerHTML = carritoDeCompraContenedor
     shoppingCartItemsContainer.append(carritoDeCompraFila)
 
@@ -135,8 +217,9 @@ function agregarItemsAlCarrito(productoTitulo, productoPrecio, productoImg) {
     carritoDeCompraFila
         .querySelector('.shoppingCartItemQuantity')
         .addEventListener('change', quantityChanged);
-
     updateShoppingCartTotal()
+
+
 }
 // Precio total y actualizar precio
 function updateShoppingCartTotal() {
@@ -158,8 +241,12 @@ function updateShoppingCartTotal() {
             shoppingCartItemQuantityElement.value
         );
         total = total + shoppingCartItemPrice * shoppingCartItemQuantity
+
     });
+
     shoppingCartTotal.innerHTML = `${total.toFixed(2)}$`
+
+
 }
 
 // Boton remover producto
@@ -185,6 +272,4 @@ function comprarButtonClicked() {
     shoppingCartItemsContainer.innerHTML = '';
     updateShoppingCartTotal();
 }
-
-
 

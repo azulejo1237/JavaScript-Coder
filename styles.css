@@ -1,7 +1,6 @@
-/* .color-body {
-    background-color: #2a475e;
-    
-} */
+.color-body {
+  background-color: #ebebeb;
+}
 
 .formulario {
   display: flex;
@@ -73,5 +72,116 @@
   }
   .shopping-cart-item-title {
     font-size: 0.8rem;
+  }
+}
+.contenedorProducto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.productoImg {
+  width: 15rem !important;
+  height: 100%;
+  object-fit: contain;
+}
+.agregarAlCarrito__boton {
+  background-color: orangered !important;
+}
+
+.productoPrecio {
+  color: #4675b9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  position: relative;
+  bottom: 1rem;
+}
+
+/* Aside Productos */
+.productos_contenidos {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 3rem;
+  margin-left: 1rem;
+}
+.aside_categoria {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+}
+.collapse_categorias {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  color: black;
+}
+.categoria_texto {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 10%;
+
+}
+.categoria__imagen--flecha-abajo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.collapse_categorias:hover {
+  color: black;
+}
+.borde-categoria {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    width: 100% !important;
+
+}
+.collapse-borde {
+  background-color: #fff;
+
+}
+#categoriaRam, #categoriaProcesadores, #categoriaTodosLosProductos, #categoriaMothers {
+  cursor: pointer;
+}
+.quitar__borde {
+  background-color: #fff !important;
+  border-color: transparent !important;
+  padding-bottom: 0.4rem !important;
+  padding-top: 0.3rem !important;
+}
+.aside_Productos {
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .productos_contenidos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .aside_categoria {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    border: solid black 1px;
+    margin: 2rem;
+  }
+  .aside_Producto {
+    display: flex;
+  }
+  .aside_Productos {
+    width: 100%;
   }
 }

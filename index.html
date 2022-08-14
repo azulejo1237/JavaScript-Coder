@@ -19,22 +19,64 @@
 
 <body class="color-body">
     <!-- Barra de navegacion -->
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <nav class="navbar navbar-expand-sm bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand">Tienda de componentes</a>
+            <a class="navbar-brand text-light">Tienda de componentes</a>
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
             </form>
             <button type="button" class="btn btn-primary btn-lg iniciar-sesion__boton" value="mostrar modale">Iniciar
                 sesión</button>
-            <a href="#"><img id="icono__carrito" src="img/icono-carrito.png" data-bs-toggle="modal"
+            <a href="#"><img id="icono__carrito" src="/img/icono-carrito.png" data-bs-toggle="modal"
                     data-bs-target="#myModal" alt="carrito de compras">
         </div></a>
 
     </nav>
-    <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-0" id="card-producto__contenido"></div>
-    <div class="contenedorProducto"></div>
+    <aside class="productos_contenidos">
+        <section class="aside_categoria">
+            <div class="borde-categoria">
+                <a class="collapse_categorias" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    <h3 class="categoria_texto">Categorías</h3><img class="categoria__imagen--flecha-abajo"
+                        src="img/icono-flecha-abajo.png" alt="">
+                </a>
+                <div class="contenedorCategorias">
+                    <div class="collapse collapse-borde" id="collapseExample">
+                        <div class="card card-body quitar__borde">
+                            <span id="categoriaTodosLosProductos">Todos los productos</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contenedorCategorias">
+                    <div class="collapse collapse-borde" id="collapseExample">
+                        <div class="card card-body quitar__borde">
+                            <span id="categoriaProcesadores">Procesadores</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contenedorCategorias">
+                    <div class="collapse collapse-borde" id="collapseExample">
+                        <div class="card card-body quitar__borde">
+                            <span id="categoriaMothers">Mothers</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contenedorCategorias">
+                    <div class="collapse collapse-borde" id="collapseExample">
+                        <div class="card card-body quitar__borde">
+                            <span id="categoriaRam">Memorias Ram</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+        </section>
+        <section class="aside_Productos">
+            <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 g-0" id="card-producto__contenido">
+            </div>
+            <div class="contenedorProducto"></div>
+        </section>
+    </aside>
     <!-- The Modal -->
     <div class="modal fade" id="myModal" tabindex="-1">
         <div class="modal-dialog modal-xl">
