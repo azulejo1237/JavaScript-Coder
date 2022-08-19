@@ -1,99 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
-<!-- CSS -->
-<link rel="stylesheet" href="styles.css">
-<!-- bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-<!-- Normalize.CSS -->
-<link rel="stylesheet" href="normalize.css">
-<!-- Toastify -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 13</title>
+    <title>RexStore</title>
+    <link rel="shorcut icon" href="img/forma-de-conejo.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- Normalize.CSS -->
+    <link rel="stylesheet" href="normalize.css">
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@500&family=EB+Garamond&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="color-body">
     <!-- Barra de navegacion -->
     <nav class="navbar navbar-expand-sm">
         <div class="container-fluid">
-            <a class="navbar-brand text-light">Tienda de componentes</a>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-            </form>
-            <button type="button" class="btn btn-primary btn-lg iniciar-sesion__boton" value="mostrar modale">Iniciar
-                sesión</button>
-            <a href="#"><img id="icono__carrito" src="/img/icono-carrito.png" data-bs-toggle="modal"
+            <a href="index.html" class="navbar-brand text-light rexstore__titulo"><img src="img/forma-de-conejo.png"
+                    alt="logo-conejo">RexStore</a>
+            <a href="#"><img id="icono__carrito" src="img/icono-carrito.png" data-bs-toggle="modal"
                     data-bs-target="#myModal" alt="carrito de compras">
         </div></a>
 
     </nav>
-    
-            <!-- Aside de categorias -->
+
+    <!-- Aside de categorias -->
     <aside class="productos_contenidos">
         <div class="contenedor_categoria_filtos">
-        <section class="aside_categoria">
-            <div class="borde-categoria">
-                <a class="collapse_categorias" data-bs-toggle="collapse" href="#collapseExample" role="button"
-                    aria-expanded="false" aria-controls="collapseExample">
-                    <h3 class="categoria_texto">Categorías</h3><img class="categoria__imagen--flecha-abajo"
-                        src="img/icono-flecha-abajo.png" alt="">
-                </a>
-                <div class="contenedorCategorias">
-                    <div class="collapse collapse-borde" id="collapseExample">
-                        <div class="card card-body quitar__borde">
-                            <span id="categoriaTodosLosProductos">Todos los productos</span>
+            <section class="aside_categoria">
+                <div class="borde-categoria">
+                    <a class="collapse_categorias" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                        aria-expanded="false" aria-controls="collapseExample">
+                        <h3 class="categoria_texto">Categorías</h3><img class="categoria__imagen--flecha-abajo"
+                            src="img/icono-flecha-abajo.png" alt="">
+                    </a>
+                    <div class="contenedorCategorias">
+                        <div class="collapse collapse-borde" id="collapseExample">
+                            <div class="card card-body quitar__borde">
+                                <span id="categoriaTodosLosProductos">Todos los productos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedorCategorias">
+                        <div class="collapse collapse-borde" id="collapseExample">
+                            <div class="card card-body quitar__borde">
+                                <span id="categoriaProcesadores">Procesadores</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedorCategorias">
+                        <div class="collapse collapse-borde" id="collapseExample">
+                            <div class="card card-body quitar__borde">
+                                <span id="categoriaMothers">Mothers</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedorCategorias">
+                        <div class="collapse collapse-borde" id="collapseExample">
+                            <div class="card card-body quitar__borde">
+                                <span id="categoriaRam">Memorias Ram</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="contenedorCategorias">
-                    <div class="collapse collapse-borde" id="collapseExample">
-                        <div class="card card-body quitar__borde">
-                            <span id="categoriaProcesadores">Procesadores</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="contenedorCategorias">
-                    <div class="collapse collapse-borde" id="collapseExample">
-                        <div class="card card-body quitar__borde">
-                            <span id="categoriaMothers">Mothers</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="contenedorCategorias">
-                    <div class="collapse collapse-borde" id="collapseExample">
-                        <div class="card card-body quitar__borde">
-                            <span id="categoriaRam">Memorias Ram</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <!-- aside filtros -->
-        <section class="aside_categoria">
-            <div class="borde-categoria">
-                <a class="collapse_categorias" data-bs-toggle="collapse" href="#collapseFiltro" role="button"
-                    aria-expanded="false" aria-controls="collapseFiltro">
-                    <h3 class="categoria_texto">Ordenar por</h3><img class="categoria__imagen--flecha-abajo"
-                        src="img/icono-flecha-abajo.png" alt="">
-                </a>
-                <div class="contenedorCategorias">
-                    <div class="collapse collapse-borde" id="collapseFiltro">
-                        <div class="card card-body quitar__borde">
-                            <span id="orden">Menor Precio</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Aside Productos -->
+        <!-- Aside Productos -->
         <section class="aside_Productos">
             <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 g-0" id="card-producto__contenido">
             </div>
@@ -166,12 +152,9 @@
     <!-- final SECTION SHOPPING CART -->
 
     <!-- Empieza FOOTER -->
-    <footer class="bg-dark p-3 mt-5">
-        <p class="text-center m-0 text-muted">Tienda componentes</p>
-    </footer>
+    <footer class="navbar p-3 mt-5"></footer>
 
     <!-- bootstrap -->
-    <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
@@ -179,6 +162,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js"></script>
     <!-- Toastify -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- JavaScript -->
     <script src="script.js"></script>
 </body>

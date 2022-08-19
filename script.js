@@ -1,35 +1,8 @@
-// Iniciar sesion Formulario
-const botonIniciarSesion = document.querySelector(".iniciar-sesion__boton")
-
-botonIniciarSesion.addEventListener("click", (e) => {
-    e.preventDefault()
-    Swal.fire({
-        title: 'Iniciar sesión',
-        html: `<input type="email" id="login" class="swal2-input" placeholder="Correo">
-        <input type="password" id="password" class="swal2-input" placeholder="Contraseña">`,
-        confirmButtonText: 'Ingresar',
-        focusConfirm: false,
-
-
-        preConfirm: () => {
-            const login = Swal.getPopup().querySelector('#login').value
-            const password = Swal.getPopup().querySelector('#password').value
-            if (!login || !password) {
-                Swal.showValidationMessage(`Por favor ingrese correo y contraseña`)
-            }
-            return { login: login, password: password }
-        }
-    }).then((result) => {
-        Swal.fire(`
-        Correo: ${result.value.login}
-        Contraseña: ${result.value.password}
-        `.trim())
-    })
-})
-
 // Productos Card
 const cardProductoContenido = document.getElementById("card-producto__contenido")
+AOS.init({
 
+});
 // Agregar al carrito boton
 function agregarAlCarritoBotones() {
     const agregarAlCarrito__botones = document.querySelectorAll(".agregarAlCarrito__boton")
@@ -37,14 +10,14 @@ function agregarAlCarritoBotones() {
         agregarAlCarritoBoton.addEventListener("click", agregarAlCarritoClick)
     })
 }
-// Procesaores Fetch
+// Procesadores Fetch
 function procesadoresProductos() {
     fetch("./json/procesadores.json")
         .then(promesa => promesa.json())
         .then(data => {
             data.forEach((producto) => {
                 cardProductoContenido.innerHTML += `
-        <div class="col d-flex justify-content-center mb-4">
+        <div class="col d-flex justify-content-center mb-4" data-aos="zoom-in">
         <div class="card shadow mb-1 card-withd card-width contenedorProducto">
             <h5 class="card-title pt-2 text-center productoTitulo">${producto.nombre}</h5><img 
                 src="${producto.img}" class="card-img-top productoImg" alt="...">
@@ -66,8 +39,8 @@ function ramsProducto() {
         .then(data => {
             data.forEach((producto) => {
                 cardProductoContenido.innerHTML += `
-        <div class="col d-flex justify-content-center mb-4">
-        <div class="card shadow mb-1  rounded card-withd card-width contenedorProducto">
+        <div class="col d-flex justify-content-center mb-4" data-aos="zoom-in">
+        <div class="card shadow mb-1  card-withd card-width contenedorProducto">
             <h5 class="card-title pt-2 text-center text-dark productoTitulo">${producto.nombre}</h5><img 
                 src="${producto.img}" class="card-img-top productoImg" alt="...">
             <div class="card-body">
@@ -81,14 +54,15 @@ function ramsProducto() {
             agregarAlCarritoBotones()
         })
 }
+// Mothers Fetch
 function mothersProducto() {
     fetch("./json//mothers.json")
         .then(promesa => promesa.json())
         .then(data => {
             data.forEach((producto) => {
                 cardProductoContenido.innerHTML += `
-        <div class="col d-flex justify-content-center mb-4">
-        <div class="card shadow mb-1  rounded card-withd card-width contenedorProducto">
+        <div class="col d-flex justify-content-center mb-4" data-aos="zoom-in">
+        <div class="card shadow mb-1  card-withd card-width contenedorProducto">
             <h5 class="card-title pt-2 text-center text-dark productoTitulo">${producto.nombre}</h5><img 
                 src="${producto.img}" class="card-img-top productoImg" alt="...">
             <div class="card-body">
@@ -102,6 +76,8 @@ function mothersProducto() {
             agregarAlCarritoBotones()
         })
 }
+
+// Todos los productos funcion
 function todosLosProductos() {
     procesadoresProductos()
     mothersProducto()
@@ -113,6 +89,7 @@ categoriaTodosLosProductos.addEventListener("click", () => {
     cardProductoContenido.innerHTML = ``
     todosLosProductos()
 })
+
 // categoria procesadores
 procesadoresProductos()
 const categoriaProcesador = document.getElementById("categoriaProcesadores")
@@ -134,6 +111,7 @@ categoriaRam.addEventListener("click", () => {
     cardProductoContenido.innerHTML = ``
     ramsProducto()
 })
+
 
 
 // Boton comprar
@@ -181,7 +159,7 @@ function agregarItemsAlCarrito(productoTitulo, productoPrecio, productoImg) {
         }
     }
 
-    // Contenedor productos
+    // Contenedor productos modal
     const carritoDeCompraFila = document.createElement("div")
     const carritoDeCompraContenedor = `
         <div class="row shoppingCartItem item">
