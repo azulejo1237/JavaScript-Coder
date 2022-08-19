@@ -1,52 +1,51 @@
 [
-    {
-        "id": 1,
-        "nombre": "Mother Biostar A320MH AM4 D4",
-        "precio": 9550,
-        "stock": 32,
-        "img": "img/Productos/Mothers/Mother_Biostar_A320MH_AM4_D4.jpg"
-    },
-    {
-        "id": 2,
-        "nombre": "Mother Asrock A320M-HDV R4.0 Ryzen M-ATX",
-        "precio": 10350,
-        "stock": 44,
-        "img": "img/Productos/Mothers/Mother_Asrock_A320M-HDV_R4.0_Ryzen_M-ATX.jpg"
-    },
-    {
-        "id": 3,
-        "nombre": "Mother ASUS PRIME A320M-K Ryzen 2da Gen Ready M-ATX",
-        "precio": 10560,
-        "stock": 82,
-        "img": "img/Productos/Mothers/Mother_ASUS_PRIME_A320M-K_Ryzen_2da_Gen_Ready_M-ATX.jpg"
-    },
-    {
-        "id": 4,
-        "nombre": "Mother Gigabyte GA-A320M-H AM4",
-        "precio": 11400,
-        "stock": 79,
-        "img": "img/Productos/Mothers/Mother_Gigabyte_GA-A320M-H_AM4.jpg"
-    },
-    {
-        "id": 5,
-        "nombre": "Mother Gigabyte A520M H AM4",
-        "precio": 15500,
-        "stock": 26,
-        "img": "img/Productos/Mothers/Mother_Gigabyte_A520M_H_AM4.jpg"
-    },
-    {
-        "id": 6,
-        "nombre": "Mother MSI B450M PRO-VDH MAX",
-        "precio": 17250,
-        "stock": 35,
-        "img": "img/Productos/Mothers/Mother_MSI_B450M_PRO-VDH_MAX.jpg"
-    },
-    {
-        "id": 7,
-        "nombre": "Mother ASUS TUF GAMING B550-PLUS WIFI II AM4",
-        "precio": 40000,
-        "stock": 58,
-        "img": "img/Productos/Mothers/Mother_ASUS_TUF_GAMING_B550-PLUS_WIFI_II_AM4.jpg"
-    }
-    
+  {
+    "id": 1,
+    "nombre": "Mother Biostar A320MH AM4 D4",
+    "precio": 9550,
+    "stock": 32,
+    "img": "img/Productos/Mothers/Mother_Biostar_A320MH_AM4_D4.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Mother Asrock A320M-HDV R4.0 Ryzen M-ATX",
+    "precio": 10350,
+    "stock": 44,
+    "img": "img/Productos/Mothers/Mother_Asrock_A320M-HDV_R4.0_Ryzen_M-ATX.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Mother ASUS PRIME A320M-K Ryzen 2da Gen Ready M-ATX",
+    "precio": 10560,
+    "stock": 82,
+    "img": "img/Productos/Mothers/Mother_ASUS_PRIME_A320M-K_Ryzen_2da_Gen_Ready_M-ATX.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Mother Gigabyte GA-A320M-H AM4",
+    "precio": 11400,
+    "stock": 79,
+    "img": "img/Productos/Mothers/Mother_Gigabyte_GA-A320M-H_AM4.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Mother Gigabyte A520M H AM4",
+    "precio": 15500,
+    "stock": 26,
+    "img": "img/Productos/Mothers/Mother_Gigabyte_A520M_H_AM4.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Mother MSI B450M PRO-VDH MAX",
+    "precio": 17250,
+    "stock": 35,
+    "img": "img/Productos/Mothers/Mother_MSI_B450M_PRO-VDH_MAX.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "Mother ASUS TUF GAMING B550-PLUS WIFI II AM4",
+    "precio": 40000,
+    "stock": 58,
+    "img": "img/Productos/Mothers/Mother_ASUS_TUF_GAMING_B550-PLUS_WIFI_II_AM4.jpg"
+  }
 ]
