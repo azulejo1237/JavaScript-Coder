@@ -18,14 +18,14 @@
         "nombre": "Memoria Kingston DDR4 4GB 2666Mhz Fury Beast",
         "precio": 5350,
         "stock": 82,
-        "img": "/img/Productos/Rams/Memoria_Kingston_DDR4_4GB_266_Mhz_Fury_Beast_Cl16.jpg"
+        "img": "img/Productos/Rams/Memoria_Kingston_DDR4_4GB_266_Mhz_Fury_Beast_Cl16.jpg"
     },
     {
         "id": 4,
         "nombre": "Memoria Kingston DDR4 8GB 3200MHz Fury Beast RGB",
         "precio": 6540,
         "stock": 79,
-        "img": "/img/Productos/Rams/Memoria_Kingston_DDR4_8GB_3200MHz_Fury_Beast_RGB.jpg"
+        "img": "img/Productos/Rams/Memoria_Kingston_DDR4_8GB_3200MHz_Fury_Beast_RGB.jpg"
     },
     {
         "id": 5,
@@ -46,6 +46,6 @@
         "nombre": "Memoria Team DDR4 16GB 3600MHz T-Force Delta RGB Black",
         "precio": 51000,
         "stock": 58,
-        "img": "/img/Productos/Rams/Memoria Team_DDR4_8GB_3200MHz_T-Force_Delta_RGB_Black_CL16-20-20-40.jpg"
+        "img": "img/Productos/Rams/Memoria Team_DDR4_8GB_3200MHz_T-Force_Delta_RGB_Black_CL16-20-20-40.jpg"
     }
 ]
